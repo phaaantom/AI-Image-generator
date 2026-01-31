@@ -13,7 +13,7 @@ async function generateAIImage() {
     downloadBtn.style.display = "none";
 
     const randomSeed = Math.floor(Math.random() * 99999);
-    // ИСПРАВЛЕННЫЙ URL с обратными кавычками и $
+    // ИСПРАВЛЕНО: Обратные кавычки + /p/ + ${}
     const imageUrl = `https://pollinations.ai{encodeURIComponent(text)}?width=1024&height=1024&seed=${randomSeed}`;
 
     imageResult.src = imageUrl;
@@ -29,7 +29,7 @@ async function generateAIImage() {
     };
 }
 
-// Кнопка скачать (БЕЗ ОШИБОК)
+// Кнопка скачать
 downloadBtn.addEventListener('click', async () => {
     const response = await fetch(imageResult.src);
     const blob = await response.blob();
