@@ -1,0 +1,38 @@
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Фикс для мобилок и планшетов */
+.form-container {
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%; /* Добавил это */
+}
+
+/* Чтобы текст загрузки было видно */
+#loading {
+    display: none;
+    font-family: 'Orbitron', sans-serif;
+    color: #00f2fe; /* Добавил неоновый цвет */
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    animation: blink 1.5s infinite;
+}
+
+/* Плавный переход для картинки */
+#image {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 20px;
+    transition: opacity 0.5s ease-in; /* Добавил плавное появление */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Generator | Phantom</title>
+    <!-- ПОЛНЫЕ ССЫЛКИ -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI ART GENERATOR</h1>
+        <div class="form-container">
+            <input type="text" id="prompt" placeholder="Describe your art (in English)...">
+            <button id="generate-btn">Создать</button>
+        </div>
+        <div class="image-container">
+            <div id="loading">ГЕНЕРИРУЮ...</div>
+            <img id="image" src="" alt="AI Art">
+        </div>
+        <button id="download-btn" style="display: none;">
+            <i class="fa-solid fa-download"></i> Скачать
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
