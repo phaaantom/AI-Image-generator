@@ -14,7 +14,7 @@ async function generateAIImage() {
 
     const randomSeed = Math.floor(Math.random() * 99999);
     // ИСПРАВЛЕНО: обратные кавычки + /p/ + ${...}
-    const imageUrl = `https://pollinations.ai{encodeURIComponent(text)}?width=1024&height=1024&seed=${randomSeed}`;
+   const imageUrl = `https://pollinations.ai{encodeURIComponent(text)}?width=1024&height=1024&seed=${randomSeed}`;
 
     imageResult.src = imageUrl;
     
