@@ -12,9 +12,8 @@ async function generateAIImage() {
     imageResult.style.display = "none";
     downloadBtn.style.display = "none";
 
-    const randomSeed = Math.floor(Math.random() * 99999);
-    // ИСПРАВЛЕНО: Обратные кавычки + /p/ + ${}
-    const imageUrl = `https://pollinations.ai{encodeURIComponent(text)}?width=1024&height=1024&seed=${randomSeed}`;
+    // ИСПРАВЛЕННЫЙ URL: максимально простой, без параметров
+    const imageUrl = `https://pollinations.ai{encodeURIComponent(text)}`;
 
     imageResult.src = imageUrl;
     
@@ -29,7 +28,7 @@ async function generateAIImage() {
     };
 }
 
-// Кнопка скачать
+// Кнопка скачать (БЕЗ ОШИБОК)
 downloadBtn.addEventListener('click', async () => {
     const response = await fetch(imageResult.src);
     const blob = await response.blob();
@@ -41,3 +40,4 @@ downloadBtn.addEventListener('click', async () => {
 
 generateBtn.onclick = generateAIImage;
 promptInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') generateAIImage(); });
+
